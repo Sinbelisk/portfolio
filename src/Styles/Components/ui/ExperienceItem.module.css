@@ -1,0 +1,65 @@
+.item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+
+  /* Timeline rail and node */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 0.4rem;
+    bottom: 0;
+    width: 2px;
+    background: color-mix(in oklab, var(--accent) 40%, var(--border));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.period {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.role {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.company {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.description {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+}

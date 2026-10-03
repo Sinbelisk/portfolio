@@ -1,0 +1,26 @@
+.button {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background: var(--accent-intro);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  translate: 0 0.5rem;
+  pointer-events: none;
+  transition: opacity 0.25s ease, translate 0.25s ease;
+
+  &[data-visible='true'] {
+    opacity: 1;
+    translate: 0 0;
+    pointer-events: auto;
+  }
+}

@@ -8,23 +8,23 @@
   background: color-mix(in oklab, var(--accent) 7%, var(--surface));
 }
 
-.section[data-accent='about'] {
+.section[data-accent="about"] {
   --accent: var(--accent-about);
 }
 
-.section[data-accent='skills'] {
+.section[data-accent="skills"] {
   --accent: var(--accent-skills);
 }
 
-.section[data-accent='projects'] {
+.section[data-accent="projects"] {
   --accent: var(--accent-projects);
 }
 
-.section[data-accent='experience'] {
+.section[data-accent="experience"] {
   --accent: var(--accent-experience);
 }
 
-.section[data-accent='contact'] {
+.section[data-accent="contact"] {
   --accent: var(--accent-contact);
 }
 
@@ -35,7 +35,7 @@
   margin-bottom: clamp(1.25rem, 3vw, 2rem);
 
   &::before {
-    content: '';
+    content: "";
     width: 0.5rem;
     height: 1.75rem;
     border-radius: var(--radius-pill);

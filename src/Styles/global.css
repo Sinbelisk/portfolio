@@ -26,6 +26,7 @@
   --radius-pill: 8px;
   --content-width: 1120px;
   --header-height: 4rem;
+  --header-offset: 5rem;
 
   font: 16px/1.65 var(--font-sans);
   color: var(--text);
@@ -64,6 +65,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
 }
 
 body {
@@ -93,6 +95,13 @@ a {
   outline: 3px solid var(--accent-intro);
   outline-offset: 3px;
   border-radius: 6px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    /* The header wraps to two rows, so the anchor offset grows */
+    --header-offset: 8rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

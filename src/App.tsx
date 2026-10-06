@@ -30,33 +30,11 @@ function App() {
   const [theme, setTheme] = useState<Theme>(() =>
     document.documentElement.dataset.theme === "dark" ? "dark" : "light",
   );
-  const [activeHref, setActiveHref] = useState(navLinks[0]?.href ?? "");
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
-
-  // Highlight the section currently in view
-  useEffect(() => {
-    const sections = navLinks
-      .map((link) => document.querySelector<HTMLElement>(link.href))
-      .filter((section): section is HTMLElement => section !== null);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        const first = visible[0];
-        if (first) setActiveHref(`#${first.target.id}`);
-      },
-      { rootMargin: "-45% 0px -50% 0px" },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
 
   const toggleTheme = () =>
     setTheme((current) => (current === "light" ? "dark" : "light"));
@@ -69,7 +47,6 @@ function App() {
       <Header
         name={profile.name}
         navLinks={navLinks}
-        activeHref={activeHref}
         theme={theme}
         onToggleTheme={toggleTheme}
       />

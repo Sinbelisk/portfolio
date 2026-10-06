@@ -1,22 +1,18 @@
 import type { NavLink, Theme } from '../../Data/types'
+import { useActiveSection } from '../../hooks/useActiveSection'
 import ThemeToggle from './ThemeToggle'
 import styles from '../../Styles/Components/layout/Header.module.css'
 
 interface HeaderProps {
   name: string
   navLinks: NavLink[]
-  activeHref: string
   theme: Theme
   onToggleTheme: () => void
 }
 
-function Header({
-  name,
-  navLinks,
-  activeHref,
-  theme,
-  onToggleTheme,
-}: HeaderProps) {
+function Header({ name, navLinks, theme, onToggleTheme }: HeaderProps) {
+  const activeHref = useActiveSection(navLinks)
+
   return (
     <header className={styles.header}>
       <a className={styles.brand} href="#top">

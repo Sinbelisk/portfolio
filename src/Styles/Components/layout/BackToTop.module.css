@@ -9,7 +9,7 @@
   height: 2.75rem;
   border-radius: 50%;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--on-accent);
   text-decoration: none;
   background: var(--accent-intro);
   box-shadow: var(--shadow);

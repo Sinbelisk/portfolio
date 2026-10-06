@@ -17,10 +17,7 @@
   margin: 0;
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   letter-spacing: -0.03em;
-  background: linear-gradient(90deg, var(--accent-intro), var(--accent-contact));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--accent-intro);
 }
 
 .tagline {
@@ -49,7 +46,7 @@
 }
 
 .primary {
-  color: #fff;
+  color: var(--on-accent);
   background: var(--accent-intro);
 
   &:hover {

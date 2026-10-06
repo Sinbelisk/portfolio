@@ -18,7 +18,7 @@
   padding: 0.7rem 1.4rem;
   border-radius: var(--radius-pill);
   font-weight: 600;
-  color: #fff;
+  color: var(--on-accent);
   text-decoration: none;
   background: var(--accent-contact);
   transition: transform 0.15s ease, box-shadow 0.2s ease;

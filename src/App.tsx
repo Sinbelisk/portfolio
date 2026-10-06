@@ -10,6 +10,7 @@ import {
 import type { Theme } from "./Data/types";
 import Header from "./Components/layout/Header";
 import BackToTop from "./Components/layout/BackToTop";
+import Footer from "./Components/layout/Footer";
 import Introduction from "./Components/sections/Introduction";
 import About from "./Components/sections/About";
 import Skills from "./Components/sections/Skills";
@@ -78,9 +79,10 @@ function App() {
         <Skills groups={skillGroups} />
         <Projects projects={projects} />
         <Experience items={experience} />
+        <Contact profile={profile} socialLinks={socialLinks} />
       </main>
 
-      <Contact profile={profile} socialLinks={socialLinks} />
+      <Footer name={profile.name} />
       <BackToTop />
     </div>
   );

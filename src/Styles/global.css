@@ -4,22 +4,24 @@
   --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, Consolas, monospace;
 
-  --page-bg: #e9e9f1;
-  --content-bg: #ffffff;
-  --bg: #ffffff;
-  --surface: #f6f6fb;
-  --text: #1b1a22;
-  --text-muted: #5b5968;
-  --border: #e5e4ec;
-  --shadow: 0 16px 40px -20px rgba(24, 18, 54, 0.35);
+  /* Black + off-white + one accent (amber) — light inversion */
+  --page-bg: #ece9e2;
+  --content-bg: #f5f3ee;
+  --bg: #fffefb;
+  --surface: #ffffff;
+  --text: #0a0a0a;
+  --text-muted: #57544d;
+  --on-accent: #f5f3ee;
+  --border: #8a8478;
+  --shadow: 0 16px 40px -20px rgba(60, 48, 20, 0.18);
 
-  /* Section accents */
-  --accent-intro: #6c4cf1;
-  --accent-about: #0891b2;
-  --accent-skills: #16a34a;
-  --accent-projects: #ea580c;
-  --accent-experience: #d97706;
-  --accent-contact: #db2777;
+  /* Single accent: every section shares the same amber */
+  --accent-intro: #8a4b00;
+  --accent-about: #8a4b00;
+  --accent-skills: #8a4b00;
+  --accent-projects: #8a4b00;
+  --accent-experience: #8a4b00;
+  --accent-contact: #8a4b00;
 
   /* 12px radius*/
   --radius: 0px;
@@ -40,21 +42,24 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --page-bg: #07080c;
-  --content-bg: #12141c;
-  --bg: #0e1016;
-  --surface: #161923;
-  --text: #f2f1f7;
-  --text-muted: #a2a1b3;
-  --border: #2a2e3d;
+  /* Black + off-white + one accent (amber) */
+  --page-bg: #000000;
+  --content-bg: #0a0a0a;
+  --bg: #000000;
+  --surface: #141414;
+  --text: #f5f3ee;
+  --text-muted: #a3a099;
+  --on-accent: #000000;
+  --border: #666560;
   --shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.8);
 
-  --accent-intro: #9d8cff;
-  --accent-about: #22d3ee;
-  --accent-skills: #4ade80;
-  --accent-projects: #fb923c;
-  --accent-experience: #fbbf24;
-  --accent-contact: #f472b6;
+  /* Single accent: every section shares the same amber */
+  --accent-intro: #f0a500;
+  --accent-about: #f0a500;
+  --accent-skills: #f0a500;
+  --accent-projects: #f0a500;
+  --accent-experience: #f0a500;
+  --accent-contact: #f0a500;
 }
 
 *,

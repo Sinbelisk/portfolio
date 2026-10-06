@@ -21,7 +21,8 @@
   --accent-experience: #d97706;
   --accent-contact: #db2777;
 
-  --radius: 12px;
+  /* 12px radius*/
+  --radius: 0px;
   --radius-pill: 8px;
   --content-width: 1120px;
   --header-height: 4rem;

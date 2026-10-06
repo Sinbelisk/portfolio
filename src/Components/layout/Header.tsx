@@ -36,8 +36,10 @@ function Header({
             </li>
           ))}
         </ul>
-        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </nav>
+      <div className={styles.theme}>
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+      </div>
     </header>
   )
 }

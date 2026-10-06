@@ -29,7 +29,8 @@ pasar sin errores).
 ```shell
 src/
 ├── main.tsx          # entrada; resuelve el tema antes del primer render
-├── App.tsx           # layout, estado de tema y scroll-spy
+├── App.tsx           # layout y estado de tema
+├── hooks/            # hooks reutilizables (useActiveSection)
 ├── Components/
 │   ├── layout/       # estructura de la página (Header, ThemeToggle, BackToTop)
 │   ├── sections/     # secciones del body (Introduction, About, Skills, ...)
@@ -47,10 +48,12 @@ src/
         └── ui/
 ```
 
-- La raíz de `src/` deja **solo** `App.tsx` y `main.tsx`.
+- La raíz de `src/` deja `App.tsx`, `main.tsx` y `hooks/`.
 - `Components/` se organiza en `layout/`, `sections/` y `ui/` para no
   amontonar archivos. Si añades un subgrupo nuevo, crea el directorio
   espejo correspondiente en `Styles/Components/`.
+- `hooks/` alberga hooks reutilizables; p. ej. `useActiveSection`, que resalta
+  el enlace activo del nav.
 
 ## Convenciones de código
 
@@ -119,10 +122,10 @@ Para cambiar el contenido de la plantilla, edita `records.ts`. No accedas a
 
 ## Accesibilidad y UX (heurísticas de Nielsen)
 
-La plantilla aplica las 10 heurísticas. Mantén estas garantías:
+El proyecto aplica las 10 heurísticas. Mantén estas garantías:
 
 1. **Estado del sistema**: enlace de nav activo vía `aria-current="location"`
-   (scroll-spy con `IntersectionObserver` en `App.tsx`); feedback en hover/focus.
+   (scroll-spy en el hook `hooks/useActiveSection.ts`); feedback en hover/focus.
 2. **Mundo real**: etiquetas en español y lenguaje claro.
 3. **Control y libertad**: skip-link "Ir al contenido" y botón "volver arriba".
 4. **Consistencia**: reutiliza `Section`, `TagList`, botones y tokens de estilo.
@@ -131,7 +134,7 @@ La plantilla aplica las 10 heurísticas. Mantén estas garantías:
 6. **Reconocimiento**: navegación siempre visible (en móvil, scrollable; nunca
    se oculta con `display: none`).
 7. **Flexibilidad y eficiencia**: `:focus-visible` global, navegación por
-   teclado, `scroll-margin-top` en las secciones.
+   teclado, `scroll-padding-top` para el offset del header.
 8. **Diseño minimalista**: jerarquía visual clara y espaciado consistente.
 9. **Ayuda a reconocer errores**: `mailto:` y enlaces con texto explícito.
 10. **Ayuda y documentación**: `aria-label`/`title` en controles y este README/AGENTS.

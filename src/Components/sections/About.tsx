@@ -4,7 +4,7 @@ import Section from "../ui/Section";
 import styles from "../../Styles/Components/sections/About.module.css";
 
 // Drop the portrait file in public/ and adjust the extension if needed
-const PORTRAIT_URL = "/portrait.png";
+const PORTRAIT_URL = `${import.meta.env.BASE_URL}portrait.png`;
 
 interface AboutProps {
   profile: Profile;

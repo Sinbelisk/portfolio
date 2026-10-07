@@ -9,6 +9,7 @@ export interface Profile {
   about: string;
   contactMessage: string;
   email: string;
+  repoUrl: string;
 }
 
 export interface NavLink {

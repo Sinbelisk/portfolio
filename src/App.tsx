@@ -59,7 +59,7 @@ function App() {
         <Contact profile={profile} socialLinks={socialLinks} />
       </main>
 
-      <Footer name={profile.name} />
+      <Footer name={profile.name} repoUrl={profile.repoUrl} />
       <BackToTop />
     </div>
   );

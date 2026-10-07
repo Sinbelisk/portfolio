@@ -2,6 +2,7 @@ import type { IconType } from "react-icons";
 import { DiJava } from "react-icons/di";
 import { GrOracle } from "react-icons/gr";
 import {
+  SiCodeberg,
   SiCss,
   SiCssmodules,
   SiDocker,
@@ -24,11 +25,10 @@ import {
   SiTypescript,
   SiVite,
 } from "react-icons/si";
-import { TbCode } from "react-icons/tb";
 
-// Global dictionary: normalized skill name -> brand icon.
-// Add a key here to give a skill its logo; unknown names fall back to TbCode.
-const skillIcons: Record<string, IconType> = {
+// Plain registry of every icon used on the site: normalized name -> icon.
+// Consume it through `getIcon` in `Data/api.ts`, never import this directly.
+export const iconMap: Record<string, IconType> = {
   ts: SiTypescript,
   typescript: SiTypescript,
   js: SiJavascript,
@@ -54,10 +54,5 @@ const skillIcons: Record<string, IconType> = {
   php: SiPhp,
   mysql: SiMysql,
   sql: GrOracle,
+  codeberg: SiCodeberg,
 };
-
-const normalize = (name: string) =>
-  name.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-export const getSkillIcon = (name: string): IconType =>
-  skillIcons[normalize(name)] ?? TbCode;

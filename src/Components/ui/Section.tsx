@@ -12,15 +12,17 @@ interface SectionProps {
   id: string;
   title: string;
   accent: SectionAccent;
+  titleExtra?: ReactNode;
   children: ReactNode;
 }
 
 // Shared block wrapper: consistent spacing and per-section accent color
-function Section({ id, title, accent, children }: SectionProps) {
+function Section({ id, title, accent, titleExtra, children }: SectionProps) {
   return (
     <section id={id} data-accent={accent} className={styles.section}>
       <header className={styles.head}>
         <h2 className={styles.title}>{title}</h2>
+        {titleExtra}
       </header>
       {children}
     </section>

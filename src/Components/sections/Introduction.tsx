@@ -1,11 +1,13 @@
 import type { Profile } from "../../Data/types";
+import AvailabilityBadge from "../ui/AvailabilityBadge";
 import styles from "../../Styles/Components/sections/Introduction.module.css";
 
 interface IntroductionProps {
   profile: Profile;
+  available: boolean;
 }
 
-function Introduction({ profile }: IntroductionProps) {
+function Introduction({ profile, available }: IntroductionProps) {
   const { name, role, tagline } = profile;
 
   return (
@@ -20,6 +22,7 @@ function Introduction({ profile }: IntroductionProps) {
         <a className={styles.secondary} href="#contact">
           Contacto
         </a>
+        <AvailabilityBadge available={available} />
       </div>
     </section>
   );

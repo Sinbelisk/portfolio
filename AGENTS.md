@@ -11,12 +11,15 @@ Portafolio personal de una sola página
 (React, Vite, TypeScript, ESLint). No instales librerías de UI, animación,
 estado ni CSS, a no ser que indique lo contrario.
 
-**Única excepción: iconos.** Se permite `react-icons` (set `simple-icons`)
-para los logos de marca de la sección de conocimientos. Los componentes de
-icono se importan de forma nombrada desde `react-icons/si` (tree-shaking) y se
-centralizan en `src/Components/ui/skillIcons.ts`, que mapea las claves del tipo
-`SkillIconName` a su componente. No importes iconos de la librería en otros
-lugares ni metas componentes en la capa `Data/`.
+**Única excepción: iconos.** Se permite `react-icons` para los logos de marca
+que usa la web (habilidades, enlace al repositorio en el footer, etc.). Los
+componentes de icono se importan de forma nombrada (tree-shaking) y se
+centralizan en `src/Data/iconsMap.ts`, un registro plano
+`nombre normalizado → icono`. Los nombres son simples `string`; el icono se
+resuelve al vuelo con `getIcon(name)` desde `Data/api.ts` y, si no hay entrada,
+cae en un icono genérico. Para añadir un icono, registra su nombre normalizado
+en `iconsMap.ts`. No importes iconos de la librería fuera de ese mapa ni
+consumas `iconsMap.ts` directamente desde los componentes.
 
 ## Comandos
 
@@ -45,6 +48,7 @@ src/
 ├── Data/
 │   ├── api.ts        # expone las queries y operaciones de datos
 │   ├── records.ts    # datos consumidos por la api
+│   ├── iconsMap.ts   # registro plano de iconos de la web
 │   └── types.ts      # interfaces de tipos
 └── Styles/
     ├── global.css    # variables globales, tema claro/oscuro y reset
@@ -92,13 +96,15 @@ El flujo es unidireccional: los componentes **solo** leen a través de
 `Data/api.ts`.
 
 - `types.ts`: interfaces de los modelos (`Profile`, `Project`, `SkillGroup`,
-  `Skill`, `ExperienceItem`, `NavLink`, `SocialLink`, `Theme`).
+  `ExperienceItem`, `NavLink`, `SocialLink`, `Theme`).
 - `records.ts`: contenido estático de ejemplo (_lorem ipsum_).
-- `api.ts`: funciones de consulta síncronas (`getProfile`, `getProjects`, …)
-  que exponen los registros.
+- `iconsMap.ts`: registro plano de iconos (`nombre normalizado → icono`). Es el
+  único punto que importa `react-icons`.
+- `api.ts`: funciones de consulta síncronas (`getProfile`, `getProjects`,
+  `getIcon`, …) que exponen los registros.
 
 Para cambiar el contenido de la plantilla, edita `records.ts`. No accedas a
-`records.ts` directamente desde los componentes.
+`records.ts` ni a `iconsMap.ts` directamente desde los componentes: usa la api.
 
 ## Estilos (`Styles/`)
 

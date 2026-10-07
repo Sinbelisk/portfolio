@@ -36,6 +36,7 @@
 
   &::before {
     content: "";
+    flex-shrink: 0;
     width: 0.6rem;
     height: 0.6rem;
     border-right: 3px solid var(--accent);

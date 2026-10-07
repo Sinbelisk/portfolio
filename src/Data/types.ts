@@ -10,6 +10,7 @@ export interface Profile {
   contactMessage: string;
   socialMessage: string;
   email: string;
+  location: string;
   repoUrl: string;
 }
 

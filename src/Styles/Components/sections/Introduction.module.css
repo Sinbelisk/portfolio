@@ -13,6 +13,29 @@
   color: var(--accent-intro);
 }
 
+.roleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.locationIcon {
+  flex-shrink: 0;
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--accent-intro);
+}
+
 .name {
   margin: 0;
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -64,5 +87,11 @@
 
   &:hover {
     border-color: var(--accent-intro);
+  }
+}
+
+@media (max-width: 600px) {
+  .availability {
+    order: -1;
   }
 }

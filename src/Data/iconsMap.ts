@@ -26,6 +26,7 @@ import {
   SiTypescript,
   SiVite,
 } from "react-icons/si";
+import { TbMapPin } from "react-icons/tb";
 
 // Plain registry of every icon used on the site: normalized name -> icon.
 // Consume it through `getIcon` in `Data/api.ts`, never import this directly.
@@ -57,4 +58,5 @@ export const iconMap: Record<string, IconType> = {
   mysql: SiMysql,
   sql: GrOracle,
   codeberg: SiCodeberg,
+  location: TbMapPin,
 };

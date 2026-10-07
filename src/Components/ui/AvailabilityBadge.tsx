@@ -2,13 +2,14 @@ import styles from "../../Styles/Components/ui/AvailabilityBadge.module.css";
 
 interface AvailabilityBadgeProps {
   available: boolean;
+  className?: string;
 }
 
-function AvailabilityBadge({ available }: AvailabilityBadgeProps) {
+function AvailabilityBadge({ available, className }: AvailabilityBadgeProps) {
   if (!available) return null;
 
   return (
-    <span className={styles.badge}>
+    <span className={className ? `${styles.badge} ${className}` : styles.badge}>
       <span className={styles.dot} aria-hidden />
       Disponible para trabajar
     </span>

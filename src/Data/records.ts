@@ -18,6 +18,7 @@ export const profile: Profile = {
     "Actualmente estoy abierto a nuevas oportunidades. Si buscas un desarrollador para tu equipo, escríbeme.",
   socialMessage: "Puedes ver más de mi código y trabajo en:",
   email: "rafjimray21y@proton.me",
+  location: "Córdoba, España",
   repoUrl: "https://codeberg.org/Sinbelisk/portfolio",
 };
 

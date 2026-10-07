@@ -1,18 +1,18 @@
-import type { ReactNode } from 'react'
-import styles from '../../Styles/Components/ui/Section.module.css'
+import type { ReactNode } from "react";
+import styles from "../../Styles/Components/ui/Section.module.css";
 
 export type SectionAccent =
-  | 'about'
-  | 'skills'
-  | 'projects'
-  | 'experience'
-  | 'contact'
+  | "about"
+  | "skills"
+  | "projects"
+  | "experience"
+  | "contact";
 
 interface SectionProps {
-  id: string
-  title: string
-  accent: SectionAccent
-  children: ReactNode
+  id: string;
+  title: string;
+  accent: SectionAccent;
+  children: ReactNode;
 }
 
 // Shared block wrapper: consistent spacing and per-section accent color
@@ -24,7 +24,7 @@ function Section({ id, title, accent, children }: SectionProps) {
       </header>
       {children}
     </section>
-  )
+  );
 }
 
-export default Section
+export default Section;

@@ -1,12 +1,12 @@
-import type { ExperienceItem as ExperienceEntry } from '../../Data/types'
-import styles from '../../Styles/Components/ui/ExperienceItem.module.css'
+import type { ExperienceItem as ExperienceEntry } from "../../Data/types";
+import styles from "../../Styles/Components/ui/ExperienceItem.module.css";
 
 interface ExperienceItemProps {
-  item: ExperienceEntry
+  item: ExperienceEntry;
 }
 
 function ExperienceItem({ item }: ExperienceItemProps) {
-  const { role, company, startLabel, endLabel, description } = item
+  const { role, company, startLabel, endLabel, description } = item;
 
   return (
     <li className={styles.item}>
@@ -19,7 +19,7 @@ function ExperienceItem({ item }: ExperienceItemProps) {
         <p className={styles.description}>{description}</p>
       </article>
     </li>
-  )
+  );
 }
 
-export default ExperienceItem
+export default ExperienceItem;

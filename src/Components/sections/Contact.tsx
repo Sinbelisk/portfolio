@@ -1,10 +1,10 @@
-import type { Profile, SocialLink } from '../../Data/types'
-import Section from '../ui/Section'
-import styles from '../../Styles/Components/sections/Contact.module.css'
+import type { Profile, SocialLink } from "../../Data/types";
+import Section from "../ui/Section";
+import styles from "../../Styles/Components/sections/Contact.module.css";
 
 interface ContactProps {
-  profile: Profile
-  socialLinks: SocialLink[]
+  profile: Profile;
+  socialLinks: SocialLink[];
 }
 
 function Contact({ profile, socialLinks }: ContactProps) {
@@ -27,7 +27,7 @@ function Contact({ profile, socialLinks }: ContactProps) {
         ))}
       </ul>
     </Section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

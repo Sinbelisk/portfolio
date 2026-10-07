@@ -1,13 +1,14 @@
-import type { Project } from '../../Data/types'
-import TagList from './TagList'
-import styles from '../../Styles/Components/ui/ProjectCard.module.css'
+import type { Project } from "../../Data/types";
+import TagList from "./TagList";
+import styles from "../../Styles/Components/ui/ProjectCard.module.css";
 
 interface ProjectCardProps {
-  project: Project
+  project: Project;
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, date, dateLabel, description, technologies, repoUrl } = project
+  const { title, date, dateLabel, description, technologies, repoUrl } =
+    project;
 
   return (
     <article className={styles.card}>
@@ -20,12 +21,17 @@ function ProjectCard({ project }: ProjectCardProps) {
       <p className={styles.description}>{description}</p>
       <TagList items={technologies} />
       {repoUrl && (
-        <a className={styles.repo} href={repoUrl} target="_blank" rel="noreferrer">
+        <a
+          className={styles.repo}
+          href={repoUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           Ver repositorio
         </a>
       )}
     </article>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

@@ -21,7 +21,9 @@
   color: var(--on-accent);
   text-decoration: none;
   background: var(--accent-contact);
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -50,7 +52,9 @@
     border-radius: var(--radius-pill);
     font-size: 0.9rem;
     text-decoration: none;
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       border-color: var(--accent-contact);

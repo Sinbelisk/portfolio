@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import type { Profile } from '../../Data/types'
-import Section from '../ui/Section'
-import styles from '../../Styles/Components/sections/About.module.css'
+import { useState } from "react";
+import type { Profile } from "../../Data/types";
+import Section from "../ui/Section";
+import styles from "../../Styles/Components/sections/About.module.css";
 
 // Drop the portrait file in public/ and adjust the extension if needed
-const PORTRAIT_URL = '/portrait.png'
+const PORTRAIT_URL = "/portrait.png";
 
 interface AboutProps {
-  profile: Profile
+  profile: Profile;
 }
 
 function About({ profile }: AboutProps) {
-  const [portraitFailed, setPortraitFailed] = useState(false)
+  const [portraitFailed, setPortraitFailed] = useState(false);
 
   return (
     <Section id="about" title="Sobre mí" accent="about">
@@ -42,7 +42,7 @@ function About({ profile }: AboutProps) {
         </figure>
       </div>
     </Section>
-  )
+  );
 }
 
-export default About
+export default About;

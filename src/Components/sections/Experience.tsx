@@ -1,10 +1,10 @@
-import type { ExperienceItem as ExperienceEntry } from '../../Data/types'
-import Section from '../ui/Section'
-import ExperienceItem from '../ui/ExperienceItem'
-import styles from '../../Styles/Components/sections/Experience.module.css'
+import type { ExperienceItem as ExperienceEntry } from "../../Data/types";
+import Section from "../ui/Section";
+import ExperienceItem from "../ui/ExperienceItem";
+import styles from "../../Styles/Components/sections/Experience.module.css";
 
 interface ExperienceProps {
-  items: ExperienceEntry[]
+  items: ExperienceEntry[];
 }
 
 function Experience({ items }: ExperienceProps) {
@@ -16,7 +16,7 @@ function Experience({ items }: ExperienceProps) {
         ))}
       </ol>
     </Section>
-  )
+  );
 }
 
-export default Experience
+export default Experience;

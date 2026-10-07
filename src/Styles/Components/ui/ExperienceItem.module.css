@@ -5,7 +5,7 @@
 
   /* Timeline rail and node */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0.4rem;
     top: 0.4rem;
@@ -15,7 +15,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0.35rem;

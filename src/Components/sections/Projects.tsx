@@ -1,10 +1,10 @@
-import type { Project } from '../../Data/types'
-import Section from '../ui/Section'
-import ProjectCard from '../ui/ProjectCard'
-import styles from '../../Styles/Components/sections/Projects.module.css'
+import type { Project } from "../../Data/types";
+import Section from "../ui/Section";
+import ProjectCard from "../ui/ProjectCard";
+import styles from "../../Styles/Components/sections/Projects.module.css";
 
 interface ProjectsProps {
-  projects: Project[]
+  projects: Project[];
 }
 
 function Projects({ projects }: ProjectsProps) {
@@ -18,7 +18,7 @@ function Projects({ projects }: ProjectsProps) {
         ))}
       </ul>
     </Section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

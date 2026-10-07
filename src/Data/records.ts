@@ -7,8 +7,6 @@ import type {
   SocialLink,
 } from "./types";
 
-// Placeholder content (lorem ipsum)
-
 export const profile: Profile = {
   name: "Lorem Ipsum",
   role: "Lorem ipsum dolor sit amet",

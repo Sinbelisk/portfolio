@@ -1,7 +1,7 @@
-import styles from '../../Styles/Components/ui/TagList.module.css'
+import styles from "../../Styles/Components/ui/TagList.module.css";
 
 interface TagListProps {
-  items: string[]
+  items: string[];
 }
 
 function TagList({ items }: TagListProps) {
@@ -13,7 +13,7 @@ function TagList({ items }: TagListProps) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
-export default TagList
+export default TagList;

@@ -1,10 +1,10 @@
-import type { SkillGroup } from '../../Data/types'
-import Section from '../ui/Section'
-import TagList from '../ui/TagList'
-import styles from '../../Styles/Components/sections/Skills.module.css'
+import type { SkillGroup } from "../../Data/types";
+import Section from "../ui/Section";
+import TagList from "../ui/TagList";
+import styles from "../../Styles/Components/sections/Skills.module.css";
 
 interface SkillsProps {
-  groups: SkillGroup[]
+  groups: SkillGroup[];
 }
 
 function Skills({ groups }: SkillsProps) {
@@ -19,7 +19,7 @@ function Skills({ groups }: SkillsProps) {
         ))}
       </ul>
     </Section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

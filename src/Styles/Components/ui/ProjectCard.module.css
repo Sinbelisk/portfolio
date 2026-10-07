@@ -36,6 +36,24 @@
   color: var(--text-muted);
 }
 
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.badge {
+  padding: 0.15rem 0.5rem;
+  border: 0px solid color-mix(in oklab, var(--accent) 35%, transparent);
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+}
+
 .description {
   margin: 0;
   font-size: 0.95rem;

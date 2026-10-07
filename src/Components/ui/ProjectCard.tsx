@@ -7,16 +7,27 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, date, dateLabel, description, roles, technologies, repoUrl } =
-    project;
+  const {
+    title,
+    date,
+    dateLabel,
+    description,
+    roles,
+    technologies,
+    repoUrl,
+    developing = false,
+  } = project;
 
   return (
     <article className={styles.card}>
       <header className={styles.head}>
         <h3 className={styles.title}>{title}</h3>
-        <time className={styles.date} dateTime={date}>
-          {dateLabel}
-        </time>
+        <div className={styles.meta}>
+          {developing && <span className={styles.badge}>Desarrollando</span>}
+          <time className={styles.date} dateTime={date}>
+            {dateLabel}
+          </time>
+        </div>
       </header>
       <p className={styles.description}>{description}</p>
       {roles && roles.length > 0 && (

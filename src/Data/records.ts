@@ -53,14 +53,14 @@ export const skillGroups: SkillGroup[] = [
 
 export const projects: Project[] = [
   {
-    id: "lorem-1",
-    title: "Lorem Ipsum",
+    id: "alephzero",
+    title: "Aleph Zero",
     date: "2024-03-01",
     dateLabel: "Mar 2024",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    technologies: ["React", "TypeScript", "Vite"],
-    repoUrl: "https://example.com/repo/lorem-1",
+    description: "Calculadora gráfica con calculos a nivel de backend.",
+    roles: ["Desarrollador backend", "Sistema de autenticación"],
+    technologies: ["React", "TypeScript", "Spring", "Java"],
+    repoUrl: "https://github.com/lPhiNix/aleph-zero-legacy",
   },
   {
     id: "lorem-2",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     date: "2023-11-01",
     dateLabel: "Nov 2023",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      "Ut ebim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     technologies: ["Node.js", "PostgreSQL", "Docker"],
   },
   {

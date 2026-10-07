@@ -7,7 +7,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, date, dateLabel, description, technologies, repoUrl } =
+  const { title, date, dateLabel, description, roles, technologies, repoUrl } =
     project;
 
   return (
@@ -19,6 +19,14 @@ function ProjectCard({ project }: ProjectCardProps) {
         </time>
       </header>
       <p className={styles.description}>{description}</p>
+      {roles && roles.length > 0 && (
+        <p className={styles.roles}>
+          <span className={styles.rolesLabel}>
+            {roles.length === 1 ? "Rol" : "Roles"}:
+          </span>{" "}
+          {roles.join(", ")}
+        </p>
+      )}
       <TagList items={technologies} />
       {repoUrl && (
         <a

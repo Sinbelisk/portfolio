@@ -27,6 +27,7 @@ export interface Project {
   date: string;
   dateLabel: string;
   description: string;
+  roles?: string[];
   technologies: string[];
   repoUrl?: string;
 }

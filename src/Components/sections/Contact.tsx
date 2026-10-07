@@ -1,4 +1,5 @@
 import type { Profile, SocialLink } from "../../Data/types";
+import { getIcon } from "../../Data/api";
 import Section from "../ui/Section";
 import styles from "../../Styles/Components/sections/Contact.module.css";
 
@@ -18,13 +19,17 @@ function Contact({ profile, socialLinks }: ContactProps) {
         <span className={styles.email}>{profile.email}</span>
       </div>
       <ul className={styles.social}>
-        {socialLinks.map((link) => (
-          <li key={link.href}>
-            <a href={link.href} target="_blank" rel="noreferrer">
-              {link.label}
-            </a>
-          </li>
-        ))}
+        {socialLinks.map((link) => {
+          const Icon = getIcon(link.label);
+          return (
+            <li key={link.href}>
+              <a href={link.href} target="_blank" rel="noreferrer">
+                <Icon className={styles.icon} aria-hidden focusable={false} />
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </Section>
   );

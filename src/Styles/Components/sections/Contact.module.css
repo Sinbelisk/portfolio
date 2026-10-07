@@ -46,7 +46,9 @@
   list-style: none;
 
   a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     padding: 0.4rem 0.9rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-pill);
@@ -61,4 +63,10 @@
       color: var(--accent-contact);
     }
   }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: clamp(1rem, 3vw, 1.15rem);
+  height: clamp(1rem, 3vw, 1.15rem);
 }

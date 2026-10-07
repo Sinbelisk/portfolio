@@ -8,8 +8,15 @@ Portafolio personal de una sola página
 (SPA) construida con **React 19 + TypeScript + Vite**.
 
 **Regla de oro: no añadir dependencias.** Usa solo lo que ya trae el scaffold
-(React, Vite, TypeScript, ESLint). No instales librerías de UI, iconos,
-animación, estado ni CSS, a no ser que indique lo contrario.
+(React, Vite, TypeScript, ESLint). No instales librerías de UI, animación,
+estado ni CSS, a no ser que indique lo contrario.
+
+**Única excepción: iconos.** Se permite `react-icons` (set `simple-icons`)
+para los logos de marca de la sección de conocimientos. Los componentes de
+icono se importan de forma nombrada desde `react-icons/si` (tree-shaking) y se
+centralizan en `src/Components/ui/skillIcons.ts`, que mapea las claves del tipo
+`SkillIconName` a su componente. No importes iconos de la librería en otros
+lugares ni metas componentes en la capa `Data/`.
 
 ## Comandos
 
@@ -85,7 +92,7 @@ El flujo es unidireccional: los componentes **solo** leen a través de
 `Data/api.ts`.
 
 - `types.ts`: interfaces de los modelos (`Profile`, `Project`, `SkillGroup`,
-  `ExperienceItem`, `NavLink`, `SocialLink`, `Theme`).
+  `Skill`, `ExperienceItem`, `NavLink`, `SocialLink`, `Theme`).
 - `records.ts`: contenido estático de ejemplo (_lorem ipsum_).
 - `api.ts`: funciones de consulta síncronas (`getProfile`, `getProjects`, …)
   que exponen los registros.

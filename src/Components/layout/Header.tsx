@@ -4,19 +4,19 @@ import ThemeToggle from "./ThemeToggle";
 import styles from "../../Styles/Components/layout/Header.module.css";
 
 interface HeaderProps {
-  name: string;
+  brandName: string;
   navLinks: NavLink[];
   theme: Theme;
   onToggleTheme: () => void;
 }
 
-function Header({ name, navLinks, theme, onToggleTheme }: HeaderProps) {
+function Header({ brandName, navLinks, theme, onToggleTheme }: HeaderProps) {
   const activeHref = useActiveSection(navLinks);
 
   return (
     <header className={styles.header}>
       <a className={styles.brand} href="#top">
-        {name}
+        {brandName}
       </a>
       <nav className={styles.nav} aria-label="Navegación principal">
         <ul className={styles.list}>

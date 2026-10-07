@@ -10,7 +10,14 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.95rem;
+}
+
+.socialMessage {
+  max-width: 60ch;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
 .mail {

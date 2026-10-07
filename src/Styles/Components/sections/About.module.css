@@ -10,6 +10,7 @@
   margin: 0;
   font-size: 1.05rem;
   color: var(--text-muted);
+  white-space: pre-line;
 }
 
 .portrait {

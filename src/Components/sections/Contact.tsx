@@ -18,6 +18,7 @@ function Contact({ profile, socialLinks }: ContactProps) {
         </a>
         <span className={styles.email}>{profile.email}</span>
       </div>
+      <p className={styles.socialMessage}>{profile.socialMessage}</p>
       <ul className={styles.social}>
         {socialLinks.map((link) => {
           const Icon = getIcon(link.label);

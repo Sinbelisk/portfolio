@@ -16,7 +16,7 @@ export const profile: Profile = {
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   contactMessage:
     "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  email: "lorem.ipsum@example.com",
+  email: "rafjimray21y@proton.me",
 };
 
 export const navLinks: NavLink[] = [
@@ -55,31 +55,21 @@ export const projects: Project[] = [
   {
     id: "alephzero",
     title: "Aleph Zero",
-    date: "2024-03-01",
-    dateLabel: "Mar 2024",
-    description: "Calculadora gráfica con calculos a nivel de backend.",
+    date: "2025",
+    dateLabel: "2025",
+    description: "Calculadora gráfica web con calculos a nivel de backend.",
     roles: ["Desarrollador backend", "Sistema de autenticación"],
-    technologies: ["React", "TypeScript", "Spring", "Java"],
+    technologies: ["React", "TypeScript", "Spring", "Java", "Docker"],
     repoUrl: "https://github.com/lPhiNix/aleph-zero-legacy",
   },
   {
-    id: "lorem-2",
-    title: "Dolor Sit Amet",
-    date: "2023-11-01",
-    dateLabel: "Nov 2023",
+    id: "webforms",
+    title: "Gestor de formularios",
+    date: "2025",
+    dateLabel: "2025-2026",
     description:
-      "Ut ebim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      "Gestor de formularios web desarrollado para la empresa Bodegas Campos",
     technologies: ["Node.js", "PostgreSQL", "Docker"],
-  },
-  {
-    id: "lorem-3",
-    title: "Consectetur Adipiscing",
-    date: "2023-06-01",
-    dateLabel: "Jun 2023",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    technologies: ["Python", "FastAPI", "Redis"],
-    repoUrl: "https://example.com/repo/lorem-3",
   },
 ];
 
@@ -114,7 +104,6 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com/" },
-  { label: "Codeberg", href: "https://codeberg.org/" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/" },
+  { label: "GitHub", href: "https://github.com/Sinbelisk" },
+  { label: "Codeberg", href: "https://codeberg.org/Sinbelisk" },
 ];

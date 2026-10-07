@@ -31,39 +31,23 @@ export const navLinks: NavLink[] = [
 export const skillGroups: SkillGroup[] = [
   {
     category: "Lenguajes",
-    items: [
-      { name: "TypeScript", icon: "typescript" },
-      { name: "JavaScript", icon: "javascript" },
-      { name: "Python", icon: "python" },
-      { name: "Go", icon: "go" },
-    ],
+    items: ["TS", "JS", "Java", "PHP"],
   },
   {
     category: "Frontend",
-    items: [
-      { name: "React", icon: "react" },
-      { name: "Vite", icon: "vite" },
-      { name: "CSS Modules", icon: "cssmodules" },
-      { name: "HTML", icon: "html" },
-    ],
+    items: ["React", "CSS", "HTML"],
   },
   {
     category: "Backend",
-    items: [
-      { name: "Node.js", icon: "node" },
-      { name: "Express", icon: "express" },
-      { name: "PostgreSQL", icon: "postgresql" },
-      { name: "Redis", icon: "redis" },
-    ],
+    items: ["Spring Boot", "Laravel"],
+  },
+  {
+    category: "Bases de Datos",
+    items: ["PostgreSQL", "MySQL", "SQL", "Redis"],
   },
   {
     category: "Herramientas",
-    items: [
-      { name: "Git", icon: "git" },
-      { name: "Docker", icon: "docker" },
-      { name: "Linux", icon: "linux" },
-      { name: "Figma", icon: "figma" },
-    ],
+    items: ["Git", "Docker", "Linux"],
   },
 ];
 

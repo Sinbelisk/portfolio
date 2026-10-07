@@ -47,6 +47,7 @@
 .title {
   margin: 0;
   font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.35;
   letter-spacing: -0.02em;
   text-decoration: underline;
   text-decoration-color: color-mix(in oklab, var(--accent) 35%, transparent);

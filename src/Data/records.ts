@@ -8,17 +8,20 @@ import type {
 } from "./types";
 
 export const profile: Profile = {
-  name: "Lorem Ipsum",
-  role: "Lorem ipsum dolor sit amet",
+  name: "Rafael Francisco Jiménez Rayo",
+  role: "Desarrollador de software",
   tagline:
-    "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Desarrollador de software con base en Java y Spring Boot. Quiero crecer en backend, aunque también me manejo en frontend con React y TypeScript/JavaScript u otras tecnologías.",
   about:
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, entusiasta del software libre y del código abierto. Me interesan sobre todo el backend, la programación de bajo nivel y el funcionamiento interno de los sistemas informáticos: me gusta entender cómo funcionan las cosas por dentro. Actualmente curso el segundo año de Desarrollo de Aplicaciones Web.",
   contactMessage:
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Actualmente estoy abierto a nuevas oportunidades. Si buscas un desarrollador para tu equipo, escríbeme.",
+  socialMessage: "Puedes ver más de mi código y trabajo en:",
   email: "rafjimray21y@proton.me",
   repoUrl: "https://codeberg.org/Sinbelisk/portfolio",
 };
+
+export const brandName = "v1.0";
 
 export const navLinks: NavLink[] = [
   { label: "Inicio", href: "#home" },
@@ -32,7 +35,7 @@ export const navLinks: NavLink[] = [
 export const skillGroups: SkillGroup[] = [
   {
     category: "Lenguajes",
-    items: ["TS", "JS", "Java", "PHP"],
+    items: ["TypeScript", "JavaScript", "Java", "PHP"],
   },
   {
     category: "Frontend",
@@ -44,7 +47,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Bases de Datos",
-    items: ["PostgreSQL", "MySQL", "SQL", "Redis"],
+    items: ["PostgreSQL", "MySQL", "Redis"],
   },
   {
     category: "Herramientas",
@@ -58,8 +61,8 @@ export const projects: Project[] = [
     title: "Aleph Zero",
     date: "2025",
     dateLabel: "2025",
-    description: "Calculadora gráfica web con calculos a nivel de backend.",
-    roles: ["Desarrollador backend", "Sistema de autenticación"],
+    description: "Calculadora gráfica web con cálculos a nivel de backend.",
+    roles: ["Desarrollador backend", "Autenticación", "Mantenedor"],
     technologies: ["React", "TypeScript", "Spring", "Java", "Docker"],
     repoUrl: "https://github.com/lPhiNix/aleph-zero-legacy",
   },
@@ -69,38 +72,30 @@ export const projects: Project[] = [
     date: "2025",
     dateLabel: "2025-2026",
     description:
-      "Gestor de formularios web desarrollado para la empresa Bodegas Campos",
-    technologies: ["Node.js", "PostgreSQL", "Docker"],
+      "Aplicación web a medida para Bodegas Campos para crear y gestionar formularios de forma dinámica y centralizada.",
+    technologies: ["Java", "Spring Boot", "React", "TypeScript"],
+  },
+  {
+    id: "scaffold",
+    title: "Scaffold",
+    date: "2026",
+    dateLabel: "2026",
+    description:
+      "Herramienta para desarrolladores que combina una CLI con un lenguaje declarativo para definir, componer y generar proyectos, configuraciones, entornos y artefactos de forma reproducible.",
+    technologies: ["Go"],
+    developing: true,
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    id: "exp-1",
-    role: "Lorem Ipsum Developer",
-    company: "Dolor Sit Amet Inc.",
-    startLabel: "Ene 2023",
-    endLabel: "Actualidad",
+    id: "tempfreelance",
+    role: "Desarrollador",
+    company: "Bodegas Campos",
+    startLabel: "2025",
+    endLabel: "2026",
     description:
-      "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: "exp-2",
-    role: "Junior Lorem Engineer",
-    company: "Consectetur Labs",
-    startLabel: "Jun 2021",
-    endLabel: "Dic 2022",
-    description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    id: "exp-3",
-    role: "Lorem Intern",
-    company: "Adipiscing Studio",
-    startLabel: "Ene 2020",
-    endLabel: "May 2021",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Desarrollo de una aplicación web de gestión de formularios en Java, Spring Boot y React, tras completar la Formación en Centros de Trabajo (FCT).",
   },
 ];
 

@@ -6,11 +6,18 @@
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   max-width: 70ch;
   margin: 0;
   font-size: 1.05rem;
   color: var(--text-muted);
   white-space: pre-line;
+
+  p {
+    margin: 0;
+  }
 }
 
 .portrait {

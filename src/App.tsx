@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  getBrandName,
   getExperience,
   getNavLinks,
   getProfile,
@@ -21,10 +22,14 @@ import styles from "./Styles/App.module.css";
 
 const navLinks = getNavLinks();
 const profile = getProfile();
+const brandName = getBrandName();
 const skillGroups = getSkills();
 const projects = getProjects();
 const experience = getExperience();
 const socialLinks = getSocialLinks();
+
+// Hardcoded availability status: flip to false when not job hunting
+const isAvailable = true;
 
 function App() {
   const [theme, setTheme] = useState<Theme>(() =>
@@ -45,18 +50,22 @@ function App() {
         Ir al contenido
       </a>
       <Header
-        name={profile.name}
+        brandName={brandName}
         navLinks={navLinks}
         theme={theme}
         onToggleTheme={toggleTheme}
       />
       <main className={styles.main} id="main">
-        <Introduction profile={profile} />
+        <Introduction profile={profile} available={isAvailable} />
         <About profile={profile} />
         <Skills groups={skillGroups} />
         <Projects projects={projects} />
         <Experience items={experience} />
-        <Contact profile={profile} socialLinks={socialLinks} />
+        <Contact
+          profile={profile}
+          socialLinks={socialLinks}
+          available={isAvailable}
+        />
       </main>
 
       <Footer name={profile.name} repoUrl={profile.repoUrl} />

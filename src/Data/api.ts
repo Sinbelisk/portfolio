@@ -2,6 +2,7 @@ import type { IconType } from "react-icons";
 import { TbCode } from "react-icons/tb";
 import { iconMap } from "./iconsMap";
 import {
+  brandName,
   experience,
   navLinks,
   profile,
@@ -23,6 +24,7 @@ const normalizeIconName = (name: string) =>
 
 // Query functions consumed by the components
 export const getProfile = (): Profile => profile;
+export const getBrandName = (): string => brandName;
 export const getNavLinks = (): NavLink[] => navLinks;
 export const getSkills = (): SkillGroup[] => skillGroups;
 export const getProjects = (): Project[] => projects;

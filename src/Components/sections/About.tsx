@@ -12,11 +12,16 @@ interface AboutProps {
 
 function About({ profile }: AboutProps) {
   const [portraitFailed, setPortraitFailed] = useState(false);
+  const paragraphs = profile.about.split(/\n{2,}/);
 
   return (
     <Section id="about" title="Sobre mí" accent="about">
       <div className={styles.body}>
-        <p className={styles.text}>{profile.about}</p>
+        <div className={styles.text}>
+          {paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
         <figure className={styles.portrait}>
           {portraitFailed ? (
             <svg

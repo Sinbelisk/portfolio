@@ -8,6 +8,7 @@ export interface Profile {
   tagline: string;
   about: string;
   contactMessage: string;
+  socialMessage: string;
   email: string;
   repoUrl: string;
 }
@@ -31,6 +32,7 @@ export interface Project {
   roles?: string[];
   technologies: string[];
   repoUrl?: string;
+  developing?: boolean;
 }
 
 export interface ExperienceItem {

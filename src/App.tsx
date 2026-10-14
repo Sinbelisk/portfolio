@@ -29,7 +29,7 @@ const experience = getExperience();
 const socialLinks = getSocialLinks();
 
 // Hardcoded availability status: flip to false when not job hunting
-const isAvailable = true;
+const isAvailable = false;
 
 function App() {
   const [theme, setTheme] = useState<Theme>(() =>

@@ -71,7 +71,7 @@ export const projects: Project[] = [
     id: "webforms",
     title: "Gestor de formularios",
     date: "2025",
-    dateLabel: "2025-2026",
+    dateLabel: "2025",
     description:
       "Aplicación web a medida para Bodegas Campos para crear y gestionar formularios de forma dinámica y centralizada.",
     technologies: ["Java", "Spring Boot", "React", "TypeScript"],
